@@ -3,7 +3,7 @@ Sistema de gestão de vendas da Colorir &amp; Estampar, feito para negócios de 
 
 🎨 Colorir & Estampar - Sistema de Gestão de Vendas
 
-Este é o sistema de gestão de vendas desenvolvido para a **Colorir & Estampar**, voltado para empresas que trabalham com sublimação e produtos personalizados.
+Este é o sistema de gestão de vendas desenvolvido para a **Colorir & Estampar**, voltado para empresa que trabalha com sublimação e produtos personalizados.
 
 ## ✨ Funcionalidades
 
