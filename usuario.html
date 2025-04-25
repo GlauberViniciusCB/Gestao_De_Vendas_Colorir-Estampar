@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="IMG/favicon.png" type="image/x-icon">
+    <title>Colorir & Estampar - Section Main </title>
+</head>
+
+<body>
+    <div class="containerMain">
+        <section class="sectionMenu">
+            <div class="avatar">
+                <img src="IMG/favicon.png" alt="Ícone de Avatar">
+                <p>Colorir & Estampar</p>
+            </div>
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a onclick="mudarPagina('Produtos')" href="#">Produtos</a></li>
+                    <li><a href="#">Estoque</a></li>
+                    <li><a href="#">Clientes</a></li>
+                    <li><a href="#">Vendas</a></li>
+                    <li class="ativo"><a href="#">Usuário</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="sectionMain">
+            <div class="pesquisa caixaInput">
+                <input type="search" placeholder="Pesquise aqui...">
+                <i class="fa-solid fa-magnifying-glass" style="color: #f4f4f2;"></i>
+            </div>
+            <div class="inicioInterativo">
+                <div class="tituloInterativo">
+                    <h2>Usuário</h2>
+                </div>
+                <div class="menuInterativo">
+                    <div class="cardInicioRapido" id="AdicionarProduto" onclick="addProduto()">
+                        <i class="fa-solid fa-plus" style="color: #f4f4f2;"></i>
+                        <h3>Adicionar</h3>
+                        <!-- <p>Total: <span>0</span></p> -->
+                    </div>
+                    <div class="cardInicioRapido" id="AtulizarProduto" onclick="atualizarProduto()">
+                        <i class="fa-solid fa-pen-to-square" style="color: #f4f4f2;"></i>
+                        <h3>Atualizar</h3>
+                        <!-- <p>Total: <span>0</span></p> -->
+                    </div>
+                    <div class="cardInicioRapido " id="deletarProduto" onclick="deletarProduto()">
+                        <i class="fa-solid fa-trash" style="color: #f4f4f2;"></i>
+                        <h3>Remover</h3>
+                        <!-- <p>Total: <span>0</span></p> -->
+                    </div>
+
+                    <div class="cardInicioRapido " id="deletarProduto" onclick="deletarProduto()">
+                        <i class="fa-solid fa-user-shield" style="color: #f4f4f2;"></i>
+                        <h3>Permissão</h3>
+                        <!-- <p>Total: <span>0</span></p> -->
+                    </div>
+
+                    <div class="cardInicioRapido azul">
+                        <i class="fa-solid fa-print" style="color: #f4f4f2;"></i>
+                        <h3>Imprimir</h3>
+                        <!-- <p>Total: <span>0</span></p> -->
+                    </div>
+                </div>
+            </div>
+            <div class="tituloHistoricoDeEstoque">
+                <h2>Histórico</h2>
+            </div>
+            <div class="areaHistoricoDeEstoque">
+                <table class="tabelaHistoricoDeProdutos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Estado</th>
+                            <th>Perfil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Caneca</td>
+                            <td>Caneca Personalizada</td>
+                            <td>R$35</td>
+                            <td>Venda</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Garrafa Squeeze</td>
+                            <td>Squeeze Personalizada</td>
+                            <td>R$35</td>
+                            <td>Garrafa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="sectionEspecial">
+            <div class="sectionEspecialConteudo">
+            
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

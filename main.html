@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="IMG/favicon.png" type="image/x-icon">
+    <title>Colorir & Estampar - Section Main </title>
+</head>
+<body>
+    <div class="containerMain">
+        <section class="sectionMenu">
+            <div class="avatar">
+                <img src="IMG/favicon.png" alt="Ícone de Avatar">
+                <p>Colorir & Estampar</p>
+                <!-- <p>Rir & Tampar</p> -->
+                <!-- <p>Oi,Aqui Sou eu!</p> -->
+            </div>
+            <nav class="navegacao">
+                <ul>
+                    <li id="Dashboard" class="ativo" onclick="mudarPagina('Dashboard')"><a href="#">Dashboard</a></li>
+                    <li id="Produtos"  onclick="mudarPagina('Produtos')"><a href="#">Produtos</a></li>
+                    <li id="Estoque" onclick="mudarPagina('Estoque')"><a href="#">Estoque</a></li>
+                    <li id="Clientes" onclick="mudarPagina('Clientes')"><a href="#">Clientes</a></li>
+                    <li id="Vendas" onclick="mudarPagina('Vendas')"><a href="#">Vendas</a></li>
+                    <li id="Usuario" onclick="mudarPagina('Usuario')"><a href="#">Usuário</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="sectionMain">
+                <div class="pesquisa caixaInput">
+                    <input type="search" placeholder="Pesquise aqui...">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #f4f4f2;"></i>
+                </div>
+                <div class="inicioRapido">
+                    <div class="cardInicioRapido">
+                        <i class="fa-solid fa-box" style="color: #f4f4f2;"></i>
+                        <h3>Produtos</h3>
+                        <p>Total: <span>0</span></p>
+                    </div>
+                    <div class="cardInicioRapido">
+                        <i class="fa-solid fa-cart-shopping" style="color: #f4f4f2;"></i>
+                        <h3>Vendas</h3>
+                        <p>Total: <span>0</span></p>
+                    </div>
+                    <div class="cardInicioRapido">
+                        <i class="fa-solid fa-boxes-stacked" style="color: #f4f4f2;"></i>
+                        <h3>Estoque</h3>
+                        <p>Total: <span>0</span></p>
+                    </div>
+                </div>
+                <div class="tituloHistoricoDeEstoque">
+                    <h2>Histórico Do Estoque</h2>
+                </div>
+                <div class="areaHistoricoDeEstoque">
+                    <table class="tabelaHistoricoDeEstoque">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Quantidade</th>
+                                <th>Estado</th>
+                                <th>Motivo</th>
+                                <th>Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Caneca</td>
+                                <td>3</td>
+                                <td>Entrada</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>3</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>3</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>4</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>4</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>4</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>4</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>4</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                            <tr>
+                                <td>5</td>
+                                <td>Garrafa 500mL</td>
+                                <td>1</td>
+                                <td>Saída</td>
+                                <td>Venda</td>
+                                <td>31/03/2025</td>
+                            </tr> 
+                        </tbody>
+                    </table>
+                </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Produtos</title>
+    <style>
+        /* Layout geral */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .produto-container {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .btn-adicionar {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-adicionar:hover {
+            background-color: #45a049;
+        }
+
+        /* Tabela de Produtos */
+        .produto-tabela table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .produto-tabela th, .produto-tabela td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .produto-tabela th {
+            background-color: #f8f8f8;
+        }
+
+        .produto-tabela td button {
+            padding: 6px 12px;
+            margin-right: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .btn-editar {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .btn-remover {
+            background-color: #f44336;
+            color: white;
+            border: none;
+        }
+
+        .btn-imprimir {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+        }
+
+        .btn-editar:hover {
+            background-color: #45a049;
+        }
+
+        .btn-remover:hover {
+            background-color: #d32f2f;
+        }
+
+        .btn-imprimir:hover {
+            background-color: #1976D2;
+        }
+
+        /* Modal */
+        .modal {
+            display: none; /* Inicialmente escondido */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-conteudo {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .modal h2 {
+            margin-top: 0;
+        }
+
+        .modal form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal form label {
+            margin: 10px 0 5px;
+        }
+
+        .modal form input, .modal form textarea, .modal form select {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .modal form button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal form button.cancelar {
+            background-color: #f44336;
+            margin-top: 10px;
+        }
+
+        .modal form button:hover {
+            background-color: #45a049;
+        }
+
+        .modal form button.cancelar:hover {
+            background-color: #d32f2f;
+        }
+
+        /* Transição para Adicionar Categoria */
+        .categoria-adicionar {
+            display: none;
+            margin-top: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .categoria-adicionar.active {
+            display: block;
+        }
+
+        .categoria-adicionar input {
+            margin-bottom: 10px;
+        }
+
+        /* Efeito de slide para nova categoria */
+        .categoria-btn {
+            margin-top: 10px;
+            background-color: #2196F3;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .categoria-btn:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="produto-container">
+    <button class="btn-adicionar" onclick="abrirModal()">Adicionar Produto</button>
+
+    <div class="produto-tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-produtos">
+                <!-- Produtos vão aparecer aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Modal de Adicionar/Editar Produto -->
+<div class="modal" id="modal-adicionar">
+    <div class="modal-conteudo">
+        <h2 id="modal-titulo">Adicionar Produto</h2>
+        <form id="form-produto">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="preco">Preço</label>
+            <input type="number" id="preco" name="preco" required>
+
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria" required>
+                <option value="categoria1">Categoria 1</option>
+                <option value="categoria2">Categoria 2</option>
+            </select>
+            <button type="button" class="categoria-btn" onclick="mostrarAdicionarCategoria()">Adicionar Nova Categoria</button>
+
+            <!-- Seção para Adicionar Nova Categoria -->
+            <div class="categoria-adicionar" id="categoria-adicionar">
+                <input type="text" id="nova-categoria" placeholder="Nova categoria" />
+                <button type="button" onclick="adicionarCategoria()">Adicionar Categoria</button>
+            </div>
+
+            <button type="submit">Salvar</button>
+            <button type="button" class="cancelar" onclick="fecharModal()">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    let produtos = [];
+    let categorias = ['categoria1', 'categoria2'];
+    let produtoEditando = null;
+
+    function abrirModal() {
+        document.getElementById('modal-adicionar').style.display = 'flex';
+        document.getElementById('form-produto').reset();
+        document.getElementById('modal-titulo').textContent = 'Adicionar Produto';
+        produtoEditando = null; // Resetar o produto sendo editado
+    }
+
+    function fecharModal() {
+        document.getElementById('modal-adicionar').style.display = 'none';
+    }
+
+    document.getElementById('form-produto').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nome = document.getElementById('nome').value;
+        const preco = parseFloat(document.getElementById('preco').value);
+        const descricao = document.getElementById('descricao').value;
+        const categoria = document.getElementById('categoria').value;
+
+        if (produtoEditando) {
+            // Atualizar produto
+            produtoEditando.nome = nome;
+            produtoEditando.preco = preco;
+            produtoEditando.descricao = descricao;
+            produtoEditando.categoria = categoria;
+            alert("Produto atualizado com sucesso!");
+        } else {
+            // Adicionar novo produto
+            const novoProduto = { id: produtos.length + 1, nome, preco, descricao, categoria };
+            produtos.push(novoProduto);
+            alert("Produto adicionado com sucesso!");
+        }
+
+        atualizarTabela();
+        fecharModal();
+    });
+
+    function mostrarAdicionarCategoria() {
+        document.getElementById('categoria-adicionar').classList.add('active');
+    }
+
+    function adicionarCategoria() {
+        const novaCategoria = document.getElementById('nova-categoria').value;
+        if (novaCategoria && !categorias.includes(novaCategoria)) {
+            categorias.push(novaCategoria);
+            const selectCategoria = document.getElementById('categoria');
+            const novaOpcao = document.createElement('option');
+            novaOpcao.value = novaCategoria;
+            novaOpcao.textContent = novaCategoria;
+            selectCategoria.appendChild(novaOpcao);
+            alert("Categoria adicionada com sucesso!");
+        } else {
+            alert("Categoria inválida ou já existe.");
+        }
+        document.getElementById('nova-categoria').value = ''; // Limpar o campo
+        document.getElementById('categoria-adicionar').classList.remove('active');
+    }
+
+    function editarProduto(id) {
+        produtoEditando = produtos.find(p => p.id === id);
+        document.getElementById('nome').value = produtoEditando.nome;
+        document.getElementById('preco').value = produtoEditando.preco;
+        document.getElementById('descricao').value = produtoEditando.descricao;
+        document.getElementById('categoria').value = produtoEditando.categoria;
+        document.getElementById('modal-titulo').textContent = 'Editar Produto';
+        abrirModal();
+    }
+
+    function removerProduto(id) {
+        if (confirm('Você tem certeza que deseja remover este produto?')) {
+            produtos = produtos.filter(p => p.id !== id);
+            atualizarTabela();
+            alert("Produto removido com sucesso!");
+        }
+    }
+
+    function imprimirProduto(id) {
+        const produto = produtos.find(p => p.id === id);
+        window.open('', '_blank').document.write(`
+            <h1>Produto: ${produto.nome}</h1>
+            <p>Preço: R$ ${produto.preco}</p>
+            <p>Descrição: ${produto.descricao}</p>
+            <p>Categoria: ${produto.categoria}</p>
+        `);
+        window.print();
+    }
+
+    function atualizarTabela() {
+        const tabelaProdutos = document.getElementById('tabela-produtos');
+        tabelaProdutos.innerHTML = '';
+
+        produtos.forEach(produto => {
+            const linha = document.createElement('tr');
+            linha.innerHTML = `
+                <td>${produto.nome}</td>
+                <td>R$ ${produto.preco}</td>
+                <td>${produto.categoria}</td>
+                <td>
+                    <button class="btn-editar" onclick="editarProduto(${produto.id})">Editar</button>
+                    <button class="btn-remover" onclick="removerProduto(${produto.id})">Remover</button>
+                    <button class="btn-imprimir" onclick="imprimirProduto(${produto.id})">Imprimir</button>
+                </td>
+            `;
+            tabelaProdutos.appendChild(linha);
+        });
+    }
+</script>
+
+</body>
+</html>

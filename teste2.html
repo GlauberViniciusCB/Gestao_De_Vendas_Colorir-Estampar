@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tela de Carregamento com Transição</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: sans-serif;
+      overflow: hidden; /* evita rolagem durante o loading */
+    }
+
+    /* Tela de carregamento */
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      z-index: 9999;
+      transition: opacity 0.8s ease, backdrop-filter 0.8s ease;
+      backdrop-filter: blur(0px);
+    }
+
+    /* Animação do carregando */
+    .dots::after {
+      content: '';
+      display: inline-block;
+      animation: dots 1s infinite steps(4);
+    }
+
+    @keyframes dots {
+      0%   { content: ''; }
+      25%  { content: '.'; }
+      50%  { content: '..'; }
+      75%  { content: '...'; }
+      100% { content: ''; }
+    }
+
+    /* Conteúdo principal */
+    #content {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      padding: 20px;
+    }
+
+    body.loaded #loader {
+      opacity: 0;
+      backdrop-filter: blur(10px);
+      pointer-events: none;
+    }
+
+    body.loaded #content {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loader">
+    Carregando<span class="dots"></span>
+  </div>
+
+  <div id="content">
+    <h1>Conteúdo do App</h1>
+    <p>Agora o app está carregado e pronto pra usar.</p>
+  </div>
+
+  <script>
+    // Simula carregamento (como se estivesse buscando dados)
+    setTimeout(() => {
+      document.body.classList.add('loaded');
+      // Opcional: remove o loader do DOM depois de algum tempo
+      setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+        document.body.style.overflow = 'auto'; // libera rolagem
+      }, 1000);
+    }, 2000); // duração do "carregamento"
+  </script>
+
+</body>
+</html>

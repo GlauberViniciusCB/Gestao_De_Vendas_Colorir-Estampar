@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    background: url(IMG/abstract-paint-splashing-vibrant-colors-liquid-motion-generated-by-ai.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 420px;
+    background: transparent;
+    border: solid 2px rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+    color: rgb(244, 244, 242);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.container h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+.container .caixaInput{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+}
+
+.caixaInput input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    outline: none;
+     
+    font-size: 16px;
+    color: rgb(244, 244, 242);
+    padding: 20px 45px 20px 20px;
+}
+
+
+.caixaInput input::placeholder{
+    color: rgb(244, 244, 242);
+}
+
+.caixaInput i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform:  translateY(-50%);
+    font-size: 20px;
+}
+
+.container .btnEntrar{
+    width: 100%;
+    height: 45px;
+    background:rgb(244, 244, 242) ;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px #0000003e;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+
+/* Main */
+
+.containerMain{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 1200px;
+    max-width: 1200px;
+    background: transparent;
+    border: solid 2px rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+    color: rgb(244, 244, 242);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.containerMain .caixaInput{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+}
+
+.containerMain .sectionMenu{
+    width: 20%;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: flex-start;
+
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+
+    margin: 0px 15px;
+    padding: 30px 40px;
+    
+}
+
+.containerMain .sectionMenu .avatar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar{
+    margin: 50px;
+}
+
+.navegacao{
+
+}
+
+.navegacao ul li{
+    list-style: none;
+    padding: 15px;
+    text-align: center;
+    
+}
+
+
+.navegacao ul li a{
+    text-decoration: none;
+    color: rgb(244, 244, 242);
+}
+
+
+.ativo{
+    background: transparent;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 50px 10px;
+    width: 100%;
+}
+
+.containerMain .sectionMain{
+    /* display: none;           apagar seção Main    */
+    width: 80%;
+    padding: 30px 40px;
+    max-width: 893px;
+    max-height: 643px;
+    box-sizing: border-box;
+
+}
+
+.pesquisa input::placeholder{
+    color: rgb(244, 244, 242);
+    font-weight: 600;
+}
+
+
+.inicioRapido{
+    display: flex;
+    justify-content: space-around;
+    background: transparent;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+}
+
+.cardInicioRapido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+    transition: transform 0.3s ease;
+    background: transparent;
+}
+
+
+.cardInicioRapido:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    /* background: linear-gradient(45deg, #3498db, #8e44ad); */
+    /* background-color: rgba(44, 62, 80, 0.8); Cinza escuro com transparência */
+    /* background-color: rgba(0, 0, 0, 0.7); Fundo preto transparente */
+    /* background-color: rgba(255, 87, 34, 0.8); Laranja vibrante */
+    /* background-color: rgba(52, 152, 219, 0.7); Azul transparente */
+}
+
+.tituloHistoricoDeEstoque{
+    margin: 30px 0px;
+    text-align: center;
+}
+
+
+.areaHistoricoDeEstoque {
+    width: 100%;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-height: 270px; /* Tamanho máximo do contêiner */
+    overflow: hidden;
+}
+
+.tabelaHistoricoDeEstoque,.tabelaHistoricoDeProdutos {
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    max-height: 250px; /* Define o tamanho da área rolável */
+    overflow-y: auto; /*Permite a rolagem do corpo da tabela*/
+    overflow-x: hidden;
+}
+
+.tabelaHistoricoDeEstoque::-webkit-scrollbar{
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    
+    width: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabelaHistoricoDeEstoque::-webkit-scrollbar-thumb{
+    /* background-color: blue; */
+    background-color: rgb(244, 244, 242);
+    border-radius: 10px;
+}
+
+.tabelaHistoricoDeEstoque th {
+    padding: 10px 41px;
+    text-align: center;
+    color: rgb(244, 244, 242);
+    background-color: rgba(44, 62, 80, 1);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-color: rgba(44, 62, 80, 1);
+    /* border: solid 1px rgba(44, 62, 80, 1); */
+    /* border: solid 1px rgba(255, 255, 255, .2); */
+    /* border: none; */
+}
+
+.tabelaHistoricoDeEstoque tr:hover {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(244, 244, 242);
+    cursor: pointer;
+}
+
+
+.tabelaHistoricoDeEstoque td {
+    border: solid 1px rgba(255, 255, 255, .2);
+    text-align: center;
+    font-size: 14px;
+}
+
+.inicioInterativo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+    /* max-height: 123.2px; */
+} 
+
+.inicioInterativo .cardInicioRapido{
+    flex: 1 1 15%;
+}
+.tituloInterativo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 20px;
+    /* color: rgba(0, 0, 0, 0.9); */
+}
+
+.menuInterativo{
+    display: flex;
+    flex-wrap: wrap;  /* Permite que os cards se movam para a próxima linha */
+    justify-content: space-between;  /* Espaçamento igual entre os cards */
+    gap: 10px;  /* Espaço entre os cards */
+    width: 100%;  /* A div pai deve ocupar 100% da largura disponível */
+    box-sizing: border-box;  /* Inclui padding e borda no cálculo da largura */
+    overflow: hidden; 
+}
+
+
+.tabelaHistoricoDeProdutos{
+    border-collapse: collapse;
+    width: 100%;
+    max-height: 250px; /* Define o tamanho da área rolável */
+    overflow-y: auto; /*Permite a rolagem do corpo da tabela*/
+    overflow-x: hidden;
+    height: 188px;
+}
+
+.tabelaHistoricoDeProdutos th{
+    width: 100%;
+    /* padding: 10px 41px; */
+    text-align: center;
+    color: rgb(244, 244, 242);
+    background-color: rgba(44, 62, 80, 1);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-color: rgba(44, 62, 80, 1);
+}
+
+
+.tabelaHistoricoDeProdutos td{
+    border: solid 1px rgba(255, 255, 255, .2);
+    text-align: right;
+}
+  
+
+.tabelaHistoricoDeProdutos::-webkit-scrollbar{
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    
+    width: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabelaHistoricoDeProdutos::-webkit-scrollbar-thumb{
+    /* background-color: blue; */
+    background-color: rgb(244, 244, 242);
+    border-radius: 10px;
+}
+
+.tabelaHistoricoDeProdutos th {
+    padding: 10px 41px;
+    text-align: center;
+    color: rgb(244, 244, 242);
+    background-color: rgba(44, 62, 80, 1);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-color: rgba(44, 62, 80, 1);
+    /* border: solid 1px rgba(44, 62, 80, 1); */
+    /* border: solid 1px rgba(255, 255, 255, .2); */
+    /* border: none; */
+}
+
+.tabelaHistoricoDeProdutos tr:hover {
+    color: rgba(0, 0, 0, 0.7);
+    background-color: rgb(244, 244, 242);
+    cursor: pointer;
+}
+
+.tabelaHistoricoDeProdutos td {
+    /* width: 98px; */
+    /* height: 24px; */
+    padding: 2px;
+    border: solid 1px rgba(255, 255, 255, .2);
+    text-align: center;
+    /* color: red; */
+    overflow: hidden;
+    font-size: 14px ;
+}
+
+
+
+/* Sub Janelas  Do Main */
+
+
+.sectionEspecial{
+    display: none;  /*Voltar para none  novamente estou apenas olhando o layout para criar a function atulizar  */
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+
+    /* width: 440px;
+    height: 560px;  */
+}
+
+.sectionEspecialConteudo{
+    /* background-color: rgb(244, 244, 242); */
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #0000003e;
+
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.btnFechar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #888;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 100%;
+    border: solid 2px rgba(255, 255, 255, .2);
+}
+
+.sectionEspecial h2{
+    margin: 10px;
+    text-align: center;
+    word-spacing: 5px;
+}
+
+
+.inputSectionEspecial{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.inputSectionEspecial i{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inputSectionEspecial input,select{
+    background-color:transparent;
+    padding: 8px 8px 8px 30px;
+    width: 80%;
+    padding: right 8px;
+    box-sizing: border-box;
+    color: rgb(244, 244, 242);
+    border-radius: 10px;
+    outline: none;
+    border: solid 2px rgba(255, 255, 255, .2);
+}   
+
+.inputSectionEspecial option{
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.inputSectionEspecial + .inputSectionEspecial{
+    margin-top: 10px;
+}
+
+.sectionEspecialConteudo input[type="submit"]{
+    margin-top: 15px;
+}
+
+.btnSubmit {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSubmit input, .btnSubmit button {
+    display: flex;
+    justify-content: center;  /* Centraliza o texto horizontalmente */
+    align-items: center;  /* Centraliza o texto verticalmente */
+    width: 80%;  /* Ajusta a largura */
+    margin: 10px auto;  /* Centraliza os botões */
+    padding: 10px;  /* Adiciona o preenchimento interno */
+    border-radius: 10px;  /* Bordas arredondadas */
+    outline: none;  /* Remove o contorno padrão */
+    cursor: pointer;  /* Torna os botões clicáveis */
+    background-color: rgb(244, 244, 242);  /* Cor de fundo padrão */
+    color: rgba(255, 255, 255,);  /* Cor do texto */
+    border: none;  /* Remove a borda padrão */
+    font-size: 16px;  /* Tamanho da fonte */
+    transition: background-color 0.3s ease;  /* Adiciona uma transição suave para a cor */
+    height: 40px; /* Garantir que o botão tenha altura suficiente */
+    font-size: 14px;
+}
+    
+.addCategoria {
+    position: relative;
+    width: 80%;
+}
+
+/* classe responsável por desativar subtelas */
+.desativado{
+    display: none;
+}
+
+.addCategoria i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f4f4f2;
+}
+
+.addCategoria input {
+    width: 100%;  /* Faz o input ocupar toda a largura da div pai */
+    padding: 8px 8px 8px 35px; /* Ajusta o padding para acomodar o ícone */
+    color: rgb(244, 244, 242);
+    border-radius: 10px;
+    outline: none;
+    border: solid 2px rgba(255, 255, 255, .2);
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.addCategoria button{
+    width: 100%;
+}
+
+
+/* Define a animação de piscar usando cores da aplicação */
+@keyframes piscar {
+    0% {
+        background-color: rgb(244, 244, 242); /* Cor inicial (fundo dos botões) */
+    }
+    50% {
+        background-color: rgba(255, 255, 255, 0.7); /* Cor transparente (como no fundo dos options) */
+    }
+    100% {
+        background-color: rgb(244, 244, 242); /* Cor final */
+    }
+}
+
+/* Aplica a animação de piscar à linha */
+.piscando {
+    animation: piscar 1s ease-in-out infinite; /* 1 segundo, loop infinito */
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+.dadoSelecionado{
+    width: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;   
+}
+
+.dadoSelecionado span{
+    margin: 0px 5px;
+}
+
+
+.Decisao{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Decisao button{
+    background-color: rgb(244, 244, 242);
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: solid 2px rgba(255, 255, 255, .2);
+}
+
+
+
+/* classes estoque section especial */
+.inputSectionEspecial h4{
+    /* width: 100%; */
+    /* display: block; */
+    /* color: red; */
+    text-align: center;
+}
+
+.conteudoEscEstoque{
+    display: flex;
+    margin-top: 5px;
+}
+
+.estoqueDisp{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+
+/* Suavização na troca de conteúdo  */
+
+.sectionMain {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  
+  .sectionMain.fade-out {
+    opacity: 0;
+  }
+  
+
