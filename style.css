@@ -663,3 +663,16 @@ body{
   }
   
 
+.conteudoEscUsuario{
+    display: flex;
+    margin-top: 10px;
+    /* padding-right: 5px; */
+}
+
+.usuarioDispEsc{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;   
+}
