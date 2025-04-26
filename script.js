@@ -993,9 +993,9 @@ function deletarCliente(){
 
 // funçoes relacionadas com section Especial de Vendas ATENÇÃO PAREI AQUI
 
-function showVendas(){
+// function showVendas(){
 
-}
+// }
 
 
 
@@ -1012,12 +1012,12 @@ function showUsuarios(){
                     <h2>Usuário</h2>
                 </div>
                 <div class="menuInterativo">
-                    <div class="cardInicioRapido" id="AdicionarProduto" onclick="addProduto()">
+                    <div class="cardInicioRapido" id="AdicionarUsuario" onclick="addUsuario()">
                         <i class="fa-solid fa-plus" style="color: #f4f4f2;"></i>
                         <h3>Adicionar</h3>
                         <!-- <p>Total: <span>0</span></p> -->
                     </div>
-                    <div class="cardInicioRapido" id="AtulizarProduto" onclick="atualizarProduto()">
+                    <div class="cardInicioRapido" id="AtulizarProduto" onclick="atualizarUsuario()">
                         <i class="fa-solid fa-pen-to-square" style="color: #f4f4f2;"></i>
                         <h3>Atualizar</h3>
                         <!-- <p>Total: <span>0</span></p> -->
@@ -1042,7 +1042,7 @@ function showUsuarios(){
                 </div>
             </div>
             <div class="tituloHistoricoDeEstoque">
-                
+                <h2>Usuários Cadastrados</h2>
             </div>
             <div class="areaHistoricoDeEstoque">
                 <table class="tabelaHistoricoDeProdutos">
@@ -1140,9 +1140,107 @@ function showUsuarios(){
 }
 
 function addUsuario(){
+    const section = document.querySelector('.sectionEspecial');
+    section.style.display = 'flex';
+    const conteudo = document.querySelector('.sectionEspecialConteudo');
+    conteudo.innerHTML = ` 
+         <div class="btnFechar" onclick="fecharMenu()">
+                                <i class="fa-solid fa-xmark" style="color: #f4f4f2;"></i>
+                    </div>
+                            <h2>Cadastrar Usuário</h2>
+                            <form action="">
+                                <div class="inputSectionEspecial">
+                                    <input type="text"  placeholder="Nome"  required>
+                                    <i class="fa-solid fa-user" style="color: #f4f4f2;"></i>
+                                </div>
+                                <div class="inputSectionEspecial">
+                                    <input type="email" placeholder="Email" required>
+                                    <i class="fa-solid fa-envelope" style="color: #f4f4f2;"></i>
+                                </div>
+                                <div class="inputSectionEspecial">
+                                    <input type="password" placeholder="Senha">
+                                    <i class="fa-solid fa-key" style="color: #f4f4f2;"></i>
+                                </div>
+                                <div class="inputSectionEspecial">
+                                    <i class="fa-solid fa-user-shield" style="color: #f4f4f2;"></i>
+                                    <select name="" id="" required>
+                                        <option disabled selected value="">Selecione o Perfil</option>
+                                        <option value="Admin">Admin</option>
+                                        <option value="Padrao">Padrão</option>
+                                    </select>
+                                </div>
+                                <div class="conteudoEscUsuario" >
+                                    <div class="usuarioDispEsc">
+                                        <input type="radio"  name="dispDeEstoque" value="Disponivel" required>
+                                        <label for="">Disponível</label>
+                                    </div>
+                                    <div class="usuarioDispEsc">
+                                        <input type="radio" name="dispDeEstoque"  value="Disponivel" required>
+                                        <label for="">Indisponível</label>
+                                    </div>
+                                </div>
+                                <div class="btnSubmit">
+                                    <input type="submit" value="Salvar">
+                                </div>
+                            </form>
     
+    `
+}
+
+
+function atualizarUsuario(){
+    const section = document.querySelector('.sectionEspecial');
+    section.style.display = 'flex';
+    const conteudo = document.querySelector('.sectionEspecialConteudo');
+    conteudo.innerHTML = `
+    <div class="btnFechar" onclick="fecharMenu()">
+                    <i class="fa-solid fa-xmark" style="color: #f4f4f2;"></i>
+            </div>
+                <h2>Atualizar Usuário</h2>
+                <form action="">
+                    <div class="inputSectionEspecial">
+                        <input type="text"  placeholder="Nome"  required>
+                        <i class="fa-solid fa-user" style="color: #f4f4f2;"></i>
+                    </div>
+                    <div class="inputSectionEspecial">
+                        <input type="email" placeholder="Email" required>
+                        <i class="fa-solid fa-envelope" style="color: #f4f4f2;"></i>
+                    </div>
+                    <div class="inputSectionEspecial">
+                        <input type="password" placeholder="Senha">
+                        <i class="fa-solid fa-key" style="color: #f4f4f2;"></i>
+                    </div>
+                    <div class="inputSectionEspecial">
+                        <i class="fa-solid fa-user-shield" style="color: #f4f4f2;"></i>
+                        <select name="" id="" required>
+                            <option disabled selected value="">Selecione o Perfil</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Padrao">Padrão</option>
+                        </select>
+                    </div>
+                    <div class="conteudoEscUsuario" >
+                        <div class="usuarioDispEsc">
+                            <input type="radio"  name="dispDeEstoque" value="Disponivel" required>
+                            <label for="">Disponível</label>
+                        </div>
+                        <div class="usuarioDispEsc">
+                            <input type="radio" name="dispDeEstoque"  value="Disponivel" required>
+                            <label for="">Indisponível</label>
+                        </div>
+                    </div>
+                    <div class="btnSubmit">
+                        <input type="submit" value="Salvar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+    
+    ` 
+
 
 }
+
 
 //controle da table mostrando qual linha está selecionada 
 
