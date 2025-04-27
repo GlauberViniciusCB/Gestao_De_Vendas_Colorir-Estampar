@@ -160,50 +160,189 @@
             </div>
         </section>
         <div class="sectionEspecial">
-            <div class="sectionEspecialConteudo">
+            <div class="sectionEspecialConteudoPermissao">
                 <div class="btnFechar" onclick="fecharMenu()">
                     <i class="fa-solid fa-xmark" style="color: #f4f4f2;"></i>
-            </div>
-                <h2>Atualizar Usuário</h2>
-                <form action="">
-                    <div class="inputSectionEspecial">
-                        <input type="text"  placeholder="Nome"  required>
-                        <i class="fa-solid fa-user" style="color: #f4f4f2;"></i>
-                    </div>
-                    <div class="inputSectionEspecial">
-                        <input type="email" placeholder="Email" required>
-                        <i class="fa-solid fa-envelope" style="color: #f4f4f2;"></i>
-                    </div>
-                    <div class="inputSectionEspecial">
-                        <input type="password" placeholder="Senha">
-                        <i class="fa-solid fa-key" style="color: #f4f4f2;"></i>
-                    </div>
-                    <div class="inputSectionEspecial">
-                        <i class="fa-solid fa-user-shield" style="color: #f4f4f2;"></i>
-                        <select name="" id="" required>
-                            <option disabled selected value="">Selecione o Perfil</option>
-                            <option value="Admin">Admin</option>
-                            <option value="Padrao">Padrão</option>
-                        </select>
-                    </div>
-                    <div class="conteudoEscUsuario" >
-                        <div class="usuarioDispEsc">
-                            <input type="radio"  name="dispDeEstoque" value="Disponivel" required>
-                            <label for="">Disponível</label>
+                </div>
+
+                <div class="tituloPermissao">
+                    <h3>Permissão</h3>
+                    <h4>Colorir & Estampar</h4>
+                </div>
+
+                <div class="subTituloPermissao">
+                    <span>Usuário</span>
+                    <span>Estoque</span>
+                </div>
+
+                <div class="inpp">
+                    <div class="colunaPermissao">
+                        <div class="areaInputsPermissao">
+                            <div class="inputsPermissao">
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Salvar">
+                                    <label>Salvar</label>
+                                </div>
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="SomenteSeusDados">
+                                    <label>Somente Seus Dados</label>
+                                </div>
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="BuscarTodos">
+                                    <label>Buscar Todos</label>
+                                </div>
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Remove">
+                                    <label>Remove</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="usuarioDispEsc">
-                            <input type="radio" name="dispDeEstoque"  value="Disponivel" required>
-                            <label for="">Indisponível</label>
+                    </div>
+
+                    <div class="colunaPermissao">
+                        <div class="areaInputsPermissao">
+                            <div class="inputsPermissao">
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Salvar">
+                                    <label>Salvar</label>
+                                </div>
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Remover">
+                                    <label>Remover</label>
+                                </div>
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Todohistórico">
+                                    <label>Todo Histórico</label>
+                                </div>
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="SomenteOseu">
+                                    <label>Somente o seu</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="btnSubmit">
-                        <input type="submit" value="Salvar">
+                </div>
+
+                <div class="subTituloPermissao">
+                    <span>Produto</span>
+                    <span>Categoria</span>
+                </div>
+
+                <div class="inpp">
+                    <div class="colunaPermissao">
+                        <div class="areaInputsPermissao">
+                            <div class="inputsPermissao">
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Salvar">
+                                    <label>Salvar</label>
+                                </div>
+                                
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Remover">
+                                    <label>Remover</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+
+                    <div class="colunaPermissao">
+                        <div class="areaInputsPermissao">
+                            <div class="inputsPermissao">
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Salvar">
+                                    <label>Salvar</label>
+                                </div>
+                                
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Remover">
+                                    <label>Remover</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="subTituloPermissao">
+                    <span>Venda</span>
+                    <span>Permissão</span>
+                </div>
+
+                <div class="inpp">
+                    <div class="colunaPermissao">
+                        <div class="areaInputsPermissao">
+                            <div class="inputsPermissao">
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Salvar">
+                                    <label>Salvar</label>
+                                </div>
+
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="atulizar">
+                                    <label>Atualizar</label>
+                                </div>
+                                
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Remover">
+                                    <label>Remover</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="colunaPermissao">
+                        <div class="areaInputsPermissao">
+                            <div class="inputsPermissao">
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="Salvar">
+                                    <label>Salvar</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="subTituloPermissao">
+                    <span>Cliente</span>
+                </div>
+
+                <div class="inpp">
+                    <div class="colunaPermissao">
+                        <div class="areaInputsPermissao">
+                            <div class="inputsPermissao">
+                                <div class="caixaInputPermissao
+                      ">
+                                    <input type="checkbox" value="remover">
+                                    <label>Remover</label>
+                                </div>
+
+                </div>
+
+                <div class="Decisao">
+                    <button type="button" value="salvar">Salvar</button>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

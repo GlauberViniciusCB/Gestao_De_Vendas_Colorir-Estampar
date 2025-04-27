@@ -1022,7 +1022,7 @@ function showUsuarios(){
                         <h3>Atualizar</h3>
                         <!-- <p>Total: <span>0</span></p> -->
                     </div>
-                    <div class="cardInicioRapido " id="deletarProduto" onclick="deletarProduto()">
+                    <div class="cardInicioRapido " id="deletarProduto" onclick="deletarUsuario()">
                         <i class="fa-solid fa-trash" style="color: #f4f4f2;"></i>
                         <h3>Remover</h3>
                         <!-- <p>Total: <span>0</span></p> -->
@@ -1233,12 +1233,51 @@ function atualizarUsuario(){
                     </div>
                 </form>
             </div>
+        </div>    
+    ` 
+}
+
+
+function deletarUsuario(){
+    const section = document.querySelector('.sectionEspecial');
+    section.style.display = 'flex';
+    const conteudo = document.querySelector('.sectionEspecialConteudo');
+    conteudo.innerHTML = `
+        <div class="btnFechar" onclick="fecharMenu()">
+                <i class="fa-solid fa-xmark" style="color: #f4f4f2;"></i>
         </div>
-    
+            <h2>Deletar Usuário ?</h2>
+           
+                <div class="escolhaSelecionada">
+                    
+                        <div class="dadoSelecionado">
+                            <span>ID:</span>
+                            <label for="">3</label>
+                        </div>
+                    
+                        <div class="dadoSelecionado">
+                            <span>Nome:</span>
+                            <label for="">Glauber Vinicius</label>
+                        </div>
+                    
+                        <div class="dadoSelecionado">
+                            <span>Email:</span>
+                            <label for="">gvinidsdsds@teste.com</label>
+                        </div>
+                </div>
+
+                <div class="Decisao">
+                    <button type="button" value="sim">Sim</button>
+                    <button type="button" value="nao">Não</button>
+                </div>
+            </div>
     
     ` 
+}
 
 
+function permissaoUsuario(){
+    
 }
 
 

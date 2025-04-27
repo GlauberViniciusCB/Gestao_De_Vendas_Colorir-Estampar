@@ -412,7 +412,7 @@ body{
 
 
 .sectionEspecial{
-    display: none;  /*Voltar para none  novamente estou apenas olhando o layout para criar a function atulizar  */
+    display: flex;  /*Voltar para none  novamente estou apenas olhando o layout para criar a function atulizar  */
     justify-content: center;
     align-items: center;
 
@@ -676,3 +676,79 @@ body{
     justify-content: flex-end;
     align-items: center;   
 }
+
+.tituloPermissao h3{
+    text-align: center;
+}
+
+.sectionEspecialConteudoPermissao {
+    width: 400px;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    padding: 20px;
+    position: relative;
+    /* background-color: #ffffff1a; */
+    color: #fff;
+  }
+
+  .sectionEspecialConteudoPermissao .btnFechar{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .subTituloPermissao {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border: solid 2px rgba(255, 255, 255, .2);
+    border-radius: 10px;
+
+  }
+  
+  .inpp {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .colunaPermissao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .areaInputsPermissao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .inputsPermissao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .caixaInputPermissao {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .inputsPermissao input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .Decisao {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
