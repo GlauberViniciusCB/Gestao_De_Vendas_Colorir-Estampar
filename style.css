@@ -410,9 +410,8 @@ body{
 
 /* Sub Janelas  Do Main */
 
-
 .sectionEspecial{
-    display: flex;  /*Voltar para none  novamente estou apenas olhando o layout para criar a function atulizar  */
+    display: none;  /*Voltar para none  novamente estou apenas olhando o layout para criar a function atulizar  */
     justify-content: center;
     align-items: center;
 
